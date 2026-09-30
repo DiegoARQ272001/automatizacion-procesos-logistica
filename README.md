@@ -23,3 +23,14 @@ La consolidación manual de pedidos, transferencias internas e inconsistencias o
 - Pipeline escalable y adaptable a nuevas fuentes de información operativa.
 
 > *Nota: Por motivos de seguridad y privacidad operativa, los identificadores de acceso, URLs internas y datos sensibles han sido reemplazados por configuraciones genéricas.*
+
+
+## Tecnologías y Librerías
+- **Backend / ETL:** Python 3.x (Requests, Pandas, Selenium WebDriver, OpenPyXL).
+- **Frontend / In-Browser Automation:** JavaScript ES6+ (Tampermonkey Userscripts para aceleración UI y bypass de cuellos de botella en ERP).
+- **Procesamiento de Texto:** Expresiones Regulares (Regex) para extracción estructurada de identificadores y metadatos.
+
+## Arquitectura de la Solución
+1. **Extracción Automatizada (Python):** Ingesta desatendida mediante consumo directo de endpoints con persistencia de tokens de sesión y cookies CSRF.
+2. **Optimizador de Flujo Operativo en Navegador (Userscript JS):** Inyección de interfaz flotante que automatiza el filtrado, validación de estados y procesamiento por lotes directamente sobre el DOM del sistema web.
+3. **Conciliación y Auditoría Operativa:** Pipelines de detección de faltantes en inventario, cálculo de tasas de surtido (Fill Rate) y exportación a reportes ejecutivos.
